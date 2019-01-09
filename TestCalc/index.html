@@ -1,0 +1,362 @@
+<<!DOCTYPE html>
+    <html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script src="jquery-2.2.3.min.js"></script>
+        <script src="jquery-ui.js"></script>
+        <script>
+            var x = (10 * 2);
+            //     document.write('Let us see how far <br> Now We are seeing : <ul> <li> Ebube </li><li> Ebube </li> </ul>' + x)
+
+            function myfinc(dob) {
+                var age = 2018 - dob;
+
+                x++;
+
+                var array = ['ebube', 'buchi', 'neme', 'amii'];
+                array[0] = 'maki';
+                array.push('Buokem', 'gozie')
+                array.unshift('Daddy');
+                array.pop();
+                array.pop();
+                array.shift();
+                delete array[2];
+                array.splice(2, 1, 'okay');
+                alert(array + ' lenght is ' + array.length);
+
+
+                student = {
+                    name: 'Prudence',
+                    Sclass: 'Jss3',
+                    position: 1
+                }
+                document.write(student.name + '&copy;' + student['Sclass']);
+            }
+
+            $(document).ready(function() {
+                var firstInput, secondInput, operator, color;
+                $('#1').click(function() {
+                    var disp = $('#display').val() + $('#1').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+
+                $('#2').click(function() {
+
+                    var disp = $('#display').val() + $('#2').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                // color = 'blue';
+                // alert(color);
+                $('#blue').draggable({
+                    revert: "valid"
+                }).mouseup(function() {
+                    color = $(this).attr('Class');
+                });
+
+                $('#red').draggable({
+                    revert: "valid"
+                }).mouseup(function() {
+                    color = $(this).attr('Class');
+                });
+                $('#yellow').draggable({
+                    revert: "valid"
+                }).mouseup(function() {
+                    color = $(this).attr('Class');
+                });
+                $('#green').draggable({
+                    revert: "valid"
+                }).mouseup(function() {
+                    color = $(this).attr('Class');
+                });
+                $('#orange').draggable({
+                    revert: "valid"
+                }).mouseup(function() {
+                    color = $(this).attr('Class');
+                });
+
+                $('#3').click(function() {
+                    var disp = $('#display').val() + $('#3').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+
+                $('#4').click(function() {
+                    var disp = $('#display').val() + $('#4').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#5').click(function() {
+                    var disp = $('#display').val() + $('#5').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+
+                $('#6').click(function() {
+                    var disp = $('#display').val() + $('#6').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#7').click(function() {
+                    var disp = $('#display').val() + $('#7').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#8').click(function() {
+                    var disp = $('#display').val() + $('#8').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#9').click(function() {
+                    var disp = $('#display').val() + $('#9').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#0').click(function() {
+                    var disp = $('#display').val() + $('#0').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+
+
+
+                $('#plus').click(function() {
+                    firstInput = $('#display').val();
+                    operator = '+';
+                    var disp = $('#display').val() + $('#plus').text();
+                    $('#display').val(disp);
+
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#equalss').click(function() {
+                    var test = $('#display').val();
+
+                    switch (operator) {
+                        case '+':
+                            secondInput = test.replace(firstInput + '+', '');
+                            disp = Number(firstInput) + Number(secondInput);
+                            break;
+                        case '-':
+                            secondInput = test.replace(firstInput + '-', '');
+                            disp = Number(firstInput) - Number(secondInput);
+                            break;
+                        case '*':
+                            secondInput = test.replace(firstInput + '*', '');
+                            disp = Number(firstInput) * Number(secondInput);
+                            break;
+                        case '/':
+                            secondInput = test.replace(firstInput + '/', '');
+                            disp = Number(firstInput) / Number(secondInput);
+                            break;
+                        default:
+                            disp = 'No Operator selected!'
+                    }
+
+                    $('#display2').val(disp);
+                    alert('Final Answer : ' + disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#minus').click(function() {
+                    firstInput = $('#display').val();
+                    operator = '-';
+                    var disp = $('#display').val() + $('#minus').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#divide').click(function() {
+                    firstInput = $('#display').val();
+                    operator = '/';
+                    var disp = $('#display').val() + $('#divide').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+                $('#multiply').click(function() {
+                    firstInput = $('#display').val();
+                    operator = '*';
+                    var disp = $('#display').val() + $('#multiply').text();
+                    $('#display').val(disp);
+                }).droppable({
+                    drop: function(event, ui) {
+                        $(this).addClass(color);
+
+                    }
+                });
+
+                $('#Clear').click(function() {
+                    $('#display').val('');
+                    $('#display2').val('');
+                });
+
+
+            });
+        </script>
+        <style>
+            .big {
+                text-align: center;
+                color: blue;
+                font-size: 3em;
+                background-color: cornsilk;
+            }
+            
+            td:hover {
+                background-color: gray;
+            }
+            
+            #display {
+                width: 300px;
+                height: 20px;
+                font-size: o.3em;
+                background-color: azure;
+            }
+            
+            #display2 {
+                width: 300px;
+                height: 50px;
+                font-size: 2em;
+                color: red;
+                background-color: azure;
+            }
+            
+            div {
+                width: 200px;
+                height: 200px;
+                text-align: center;
+                font-size: 1em;
+            }
+            
+            .blue {
+                color: white;
+                background-color: blue;
+            }
+            
+            .green {
+                color: white;
+                background-color: green;
+            }
+            
+            .red {
+                color: white;
+                background-color: red;
+            }
+            
+            .yellow {
+                color: white;
+                background-color: yellow;
+            }
+            
+            .orange {
+                color: white;
+                background-color: orange;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1>Godly Seeds Calculator 1.0</h1>
+        <table width='300px' height="400px" border='2px' cellpadding='5px'>
+            <tr>
+                <td colspan="3"><input id="display" type="text"> <input id="display2" type="text"></td>
+                <td>Colors: To color Button, Drag to any Number</td>
+            </tr>
+            <tr>
+                <td class="big" id="1">1</td>
+                <td class="big" id="2">2</td>
+                <td class="big" id="3">3</td>
+                <td class="big blue" id="blue">blue</td>
+            </tr>
+            <tr>
+                <td class="big" id="4">4</td>
+                <td class="big" id="5">5</td>
+                <td class="big" id="6">6</td>
+                <td class="big green" id="green">green</td>
+            </tr>
+            <tr>
+                <td class="big" id="7">7</td>
+                <td class="big" id="8">8</td>
+                <td class="big" id="9">9</td>
+                <td class="big red" id="red">red</td>
+            </tr>
+            <tr>
+                <td class="big" id="plus">+</td>
+                <td class="big" id="0">0</td>
+                <td class="big" id="minus">-</td>
+                <td class="big yellow" id="yellow">yellow</td>
+            </tr>
+            <tr>
+                <td class="big" id="multiply">*</td>
+                <td class="big" id="divide">/</td>
+                <td class="big" id="equalss">=</td>
+                <td class="big orange" id="orange">orange</td>
+            </tr>
+            <tr>
+                <td id="Clear" class="big" colspan="3">Clear</td>
+            </tr>
+        </table>
+
+
+
+    </body>
+
+    </html>
